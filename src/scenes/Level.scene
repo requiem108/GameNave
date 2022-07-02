@@ -1,0 +1,66 @@
+{
+    "id": "01aefa93-6044-4159-8358-7e91310aa05f",
+    "sceneType": "SCENE",
+    "settings": {
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Level"
+    },
+    "displayList": [
+        {
+            "type": "Sprite",
+            "id": "ca730f9c-5746-47d8-bbde-9f6f37b9b059",
+            "label": "Player",
+            "scope": "CLASS",
+            "components": [
+                "Physics",
+                "Movement"
+            ],
+            "texture": {
+                "key": "center"
+            },
+            "x": 393,
+            "y": 338,
+            "scaleX": 0.5,
+            "scaleY": 0.5
+        },
+        {
+            "type": "Sprite",
+            "id": "a502ecfb-f06a-4260-a3a2-8797caf89b73",
+            "label": "target",
+            "scope": "CLASS",
+            "components": [],
+            "texture": {
+                "key": "guapen"
+            },
+            "x": 344,
+            "y": 294,
+            "scaleX": 0.1,
+            "scaleY": 0.1
+        },
+        {
+            "type": "Sprite",
+            "id": "836efb6c-b88d-4a88-9273-26f8c65fbdcc",
+            "label": "minaRed",
+            "scope": "CLASS",
+            "components": [
+                "Mina"
+            ],
+            "Mina.velocidad": 70,
+            "texture": {
+                "key": "mina"
+            },
+            "x": 438,
+            "y": 92,
+            "scaleX": 0.7,
+            "scaleY": 0.7
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "anims": [
+        {
+            "key": "inpact_mina_shot",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "mina",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "mina_shot1",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 15,
+            "skipMissedFrames": true,
+            "yoyo": true
+        }
+    ],
+    "globalTimeScale": 1,
+    "meta": {
+        "app": "Phaser Editor 2D v3",
+        "contentType": "Phaser v3 Animations"
+    }
+}

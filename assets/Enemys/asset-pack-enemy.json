@@ -1,0 +1,78 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/EnemyInpac/explosion_mina.json",
+                "type": "animation",
+                "key": "explosion_mina"
+            },
+            {
+                "url": "assets/EnemyInpac/inpact_mina.json",
+                "type": "animation",
+                "key": "inpact_mina"
+            },
+            {
+                "url": "assets/Enemys/mina.png",
+                "type": "image",
+                "key": "mina"
+            },
+            {
+                "url": "nave_components/Mina.js",
+                "type": "script",
+                "key": "Mina"
+            },
+            {
+                "url": "assets/EnemyInpac/mina_explotion.json",
+                "type": "animation",
+                "key": "mina_explotion"
+            },
+            {
+                "url": "assets/EnemyInpac/mina_shot0.png",
+                "type": "image",
+                "key": "mina_shot0"
+            },
+            {
+                "url": "assets/EnemyInpac/mina_shot1.png",
+                "type": "image",
+                "key": "mina_shot1"
+            },
+            {
+                "url": "assets/EnemyInpac/mina_shot2.png",
+                "type": "image",
+                "key": "mina_shot2"
+            },
+            {
+                "url": "assets/EnemyInpac/mina_shot3.png",
+                "type": "image",
+                "key": "mina_shot3"
+            },
+            {
+                "url": "assets/EnemyInpac/mina_shot4.png",
+                "type": "image",
+                "key": "mina_shot4"
+            },
+            {
+                "url": "assets/EnemyInpac/mina_shot5.png",
+                "type": "image",
+                "key": "mina_shot5"
+            },
+            {
+                "url": "assets/EnemyInpac/mina_shot6.png",
+                "type": "image",
+                "key": "mina_shot6"
+            },
+            {
+                "url": "assets/EnemyInpac/mina_shot7.png",
+                "type": "image",
+                "key": "mina_shot7"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

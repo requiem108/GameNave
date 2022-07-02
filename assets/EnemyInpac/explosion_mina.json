@@ -1,0 +1,57 @@
+{
+    "anims": [
+        {
+            "key": "explo_minamina_shot",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "mina_shot0",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "mina_shot1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "mina_shot2",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "mina_shot3",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "mina_shot4",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "mina_shot5",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "mina_shot6",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "mina_shot7",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 10,
+            "skipMissedFrames": true
+        }
+    ],
+    "globalTimeScale": 1,
+    "meta": {
+        "app": "Phaser Editor 2D v3",
+        "contentType": "Phaser v3 Animations"
+    }
+}

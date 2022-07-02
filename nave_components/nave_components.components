@@ -1,0 +1,105 @@
+{
+    "components": [
+        {
+            "name": "Movement",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Sprite",
+            "properties": []
+        },
+        {
+            "name": "Physics",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": []
+        },
+        {
+            "name": "Disparo",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "movimiento",
+                    "label": "Movimiento",
+                    "tooltip": "Movimiento",
+                    "defValue": 0,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                },
+                {
+                    "name": "duracion",
+                    "label": "Duracion disparo",
+                    "tooltip": "Duracion",
+                    "defValue": 5000,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "velocidad",
+                    "label": "Velocidad disparo",
+                    "tooltip": "Velocidad",
+                    "defValue": 350,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "nombre",
+                    "label": "Nombre",
+                    "tooltip": "Nombre",
+                    "defValue": "normal",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "string"
+                    }
+                },
+                {
+                    "name": "damage",
+                    "label": "Damage",
+                    "tooltip": "Damage",
+                    "defValue": 20,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Mina",
+            "baseClass": "",
+            "gameObjectType": "Phaser.GameObjects.Image",
+            "properties": [
+                {
+                    "name": "life",
+                    "label": "Life",
+                    "tooltip": "Life",
+                    "defValue": 100,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "velocidad",
+                    "label": "Velocidad",
+                    "tooltip": "Velocidad",
+                    "defValue": 20,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - Object Script Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType"
+    }
+}

@@ -1,0 +1,73 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/Nave/center.png",
+                "type": "image",
+                "key": "center"
+            },
+            {
+                "url": "nave_components/Disparo.js",
+                "type": "script",
+                "key": "Disparo"
+            },
+            {
+                "url": "assets/Nave/Disparo.png",
+                "type": "image",
+                "key": "Disparo_1"
+            },
+            {
+                "url": "assets/Nave/left1.png",
+                "type": "image",
+                "key": "left1"
+            },
+            {
+                "url": "assets/Nave/left2.png",
+                "type": "image",
+                "key": "left2"
+            },
+            {
+                "url": "nave_components/Movement.js",
+                "type": "script",
+                "key": "Movement"
+            },
+            {
+                "url": "assets/Nave/NaveAnimation.json",
+                "type": "animation",
+                "key": "NaveAnimation"
+            },
+            {
+                "url": "nave_components/Physics.js",
+                "type": "script",
+                "key": "Physics"
+            },
+            {
+                "url": "assets/Nave/right1.png",
+                "type": "image",
+                "key": "right1"
+            },
+            {
+                "url": "assets/Nave/right2.png",
+                "type": "image",
+                "key": "right2"
+            },
+            {
+                "url": "assets/Nave/Up1.png",
+                "type": "image",
+                "key": "Up1"
+            },
+            {
+                "url": "assets/Nave/Up2.png",
+                "type": "image",
+                "key": "Up2"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}
