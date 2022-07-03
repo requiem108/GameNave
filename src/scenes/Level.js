@@ -67,12 +67,19 @@ class Level extends Phaser.Scene {
 	enemy_minas
 	cartucho
 
+	//Sonidos
+	explosion_sound
+	laser_sound
+
 	create() {	
 
 		//COMPONENETES NAVE	
 		this.editorCreate();
 		playerGlobal = this.player
 		targetGlobal = this.target
+
+		this.explosion_sound = this.sound.add('z_explotion');
+		this.laser_sound = this.sound.add('z_laser')
 
 
 		this.player.play('up')	
@@ -95,7 +102,7 @@ class Level extends Phaser.Scene {
 
 
 		this.minaRed.body.setBounce(0)
-		this.minaRed.play('explo_minamina_shot')
+		this.minaRed.play('estado_normal_mina')
 
 		/**GRUPOS ENEMYS*/		
 		this.minaRedGroup = this.add.group({
@@ -112,7 +119,11 @@ class Level extends Phaser.Scene {
 
 		var timerMinas = this.timerMinas(this.player,this.minaRedGroup)		
 
-		this.physics.add.collider(this.shotVulcan,this.minaRedGroup,this.minaInpact,null,this);		
+		//colisiones disparoEnemigos
+		this.physics.add.collider(this.shotVulcan,this.minaRedGroup,this.minaInpact,null,this);			
+		
+		//colisiones con player
+		this.physics.add.collider(this.player,this.minaRedGroup,this.playerInpact_mina,null,this);	
 
 	}
 
@@ -158,6 +169,7 @@ class Level extends Phaser.Scene {
 							conponenteDisparo.movimiento = true;
 							disparo.setActive(true);
 							disparo.setVisible(true);
+							this.laser_sound.play()
 						}						
 					},
 					loop: true,
@@ -196,10 +208,9 @@ timerMinas(player,minaRedGroup){
 			const x = Phaser.Math.Between((player.x-204), (player.x+204));
 			const y = Phaser.Math.Between((player.y-204), (player.y+204));					
 			var mina = minaRedGroup.get(x, y,"mina",true)
-			
+
 			if(mina != null){				
-				var comp_mina = new Mina(mina);
-				//mina = comp_mina.gameObject							
+				var comp_mina = new Mina(mina);											
 			}					
 		},
 		loop: true,
@@ -215,28 +226,38 @@ timerMinas(player,minaRedGroup){
 	minaInpact(disparo,mina){	
 		if(disparo.active & mina.life > 0){
 			mina.life -= 20
-			if(mina.life <=0){
-				
-				//mina.play('mina_explotion')
-				//mina.explotar();
-				
-				mina.play('explo_minamina_shot')
+			if(mina.life <=0){			
+
+				this.explosion_sound.play()
+				mina.play('explo_minamina_shot',true)
 				mina.once('animationcomplete',()=>{
 					mina.setVisible(false);
-					mina.setActive(false);					
+					mina.setActive(false);
+					mina.play('estado_normal_mina')					
 				})
-				
-				
-								
-				
+
+
+
+
 			}
-			//mina.play('explo_minamina_shot')	
-			//mina.play('inpact_mina_shot')
-			
 		}
 		disparo.setActive(false);
 		disparo.setVisible(false);
+
+	}
+
+	playerInpact_mina(player,mina){
+
 		
+		player.DamagePlayer(player,mina.damage)
+		mina.play('explo_minamina_shot',true)
+		mina.once('animationcomplete',()=>{				
+			mina.setVisible(false);
+			mina.setActive(false);
+			mina.play('estado_normal_mina',true)			
+		})
+		
+
 	}
 //INPACT COLISIONES FIN------------------------------
 

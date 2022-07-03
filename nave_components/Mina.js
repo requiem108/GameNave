@@ -14,7 +14,8 @@ class Mina {
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
-		this.gameObject.life = 	this.life	
+		this.gameObject.life = 	this.life
+		this.gameObject.damage = this.damage	
 		this.gameObject.explotar = ()=>{this.explocion(this.gameObject)}	
 		this.scene = this.gameObject.scene
 		this.scene.physics.add.existing(this.gameObject)
@@ -45,13 +46,15 @@ class Mina {
 	life = 100;
 	/** @type {number} */
 	velocidad = 20;
+	/** @type {number} */
+	damage = 40;
 
 	/* START-USER-CODE */
 	body;	
 
 	update(){	
 
-		
+
 
 		this.scene.physics.moveToObject(this.gameObject, playerGlobal, 10);
 
@@ -76,7 +79,7 @@ class Mina {
 				if(this.activar){
 					mina.setVisible(true);
 				}				
-				
+
 			}
 		});
 	}
@@ -92,11 +95,11 @@ class Mina {
 			repeat: 0,            // -1: infinity
 			yoyo: false,
 			onComplete:()=>{
-				
+
 					mina.setVisible(false);
 					mina.setActive(false);
-								
-				
+
+
 			}
 		});
 	} 		

@@ -2,6 +2,11 @@
     "section1": {
         "files": [
             {
+                "url": "assets/EnemyInpac/estado_mina_normal.json",
+                "type": "animation",
+                "key": "estado_mina_normal"
+            },
+            {
                 "url": "assets/EnemyInpac/explosion_mina.json",
                 "type": "animation",
                 "key": "explosion_mina"
@@ -20,11 +25,6 @@
                 "url": "nave_components/Mina.js",
                 "type": "script",
                 "key": "Mina"
-            },
-            {
-                "url": "assets/EnemyInpac/mina_explotion.json",
-                "type": "animation",
-                "key": "mina_explotion"
             },
             {
                 "url": "assets/EnemyInpac/mina_shot0.png",
@@ -65,6 +65,26 @@
                 "url": "assets/EnemyInpac/mina_shot7.png",
                 "type": "image",
                 "key": "mina_shot7"
+            },
+            {
+                "url": "assets/Enemys/minab.png",
+                "type": "image",
+                "key": "minab"
+            },
+            {
+                "url": "assets/Enemys/minac.png",
+                "type": "image",
+                "key": "minac"
+            },
+            {
+                "url": "assets/Enemys/minad.png",
+                "type": "image",
+                "key": "minad"
+            },
+            {
+                "url": "assets/Enemys/minae.png",
+                "type": "image",
+                "key": "minae"
             }
         ]
     },

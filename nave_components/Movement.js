@@ -13,6 +13,12 @@ class Movement {
 		gameObject["__Movement"] = this;
 
 		/* START-USER-CTR-CODE */
+		this.body = this.gameObject.body
+		this.body.setSize(70, 70)
+		this.gameObject.life = this.life
+
+		this.gameObject.DamagePlayer=this.DamagePlayer()
+
 		const scene = this.gameObject.scene			
 		this.cursors = scene.input.keyboard.createCursorKeys()		 
 		scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this);
@@ -26,6 +32,12 @@ class Movement {
 
 	/** @type {Phaser.GameObjects.Sprite} */
 	gameObject;
+	/** @type {number} */
+	life = 140;
+	/** @type {number} */
+	speed = 200;
+	/** @type {boolean} */
+	invulnerable = false;
 
 	/* START-USER-CODE */
 
@@ -34,7 +46,7 @@ class Movement {
 	}
 
 	mover_nave(){
-		const speed = 200
+		const speed = this.speed
 		const player = this.gameObject
 		const body = player.body
 
@@ -65,12 +77,45 @@ class Movement {
 
 		}else{
 			body.setVelocity(0, 0)
-			const key = player.anims.currentAnim.key
-			const parts = key.split('-')
-			const direction = parts[0]
-			player.play(`${direction}-idle`)
+			//const key = player.anims.currentAnim.key
+			//const parts = key.split('-')
+			//const direction = parts[0]
+			//player.play(`${direction}-idle`) 
 		}
 
+	}
+
+	DamagePlayer(){
+		
+		return (player,damage)=>{			
+
+			if(!this.invulnerable){
+
+				this.gameObject.life -= damage
+				console.log(`DAÑOOO ${player.life} - ${damage}`)
+				this.invulnerable = true;
+
+				if(player.life < 0){
+					player.play('explo_minamina_shot',true)
+					player.once('animationcomplete',()=>{
+						//GAME OVER
+						player.play('up')
+						//player.life = 140
+					})
+				}else{				
+					
+					player.play('up',true)
+					player.once('animationcomplete',()=>{
+						this.invulnerable=false
+					})
+
+				}
+			}
+			
+		}
+		
+		
+		
 	}
 	/* END-USER-CODE */
 }

@@ -1,0 +1,43 @@
+{
+    "anims": [
+        {
+            "key": "estado_normal_mina",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "minad",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "minae",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "mina",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "minac",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "minab",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 24,
+            "skipMissedFrames": true,
+            "repeat": -1
+        }
+    ],
+    "globalTimeScale": 1,
+    "meta": {
+        "app": "Phaser Editor 2D v3",
+        "contentType": "Phaser v3 Animations"
+    }
+}

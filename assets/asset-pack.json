@@ -5,6 +5,27 @@
                 "url": "assets/dino.png",
                 "key": "dino",
                 "type": "image"
+            },
+            {
+                "url": [
+                    "assets/sounds_genericos/machin.mp3"
+                ],
+                "type": "audio",
+                "key": "machin"
+            },
+            {
+                "url": [
+                    "assets/sounds_genericos/z_explotion.mp3"
+                ],
+                "type": "audio",
+                "key": "z_explotion"
+            },
+            {
+                "url": [
+                    "assets/sounds_genericos/z_laser.mp3"
+                ],
+                "type": "audio",
+                "key": "z_laser"
             }
         ]
     },
@@ -12,6 +33,7 @@
         "app": "Phaser Editor 2D - Asset Pack Editor",
         "contentType": "phasereditor2d.pack.core.AssetContentType",
         "url": "https://phasereditor2d.com",
-        "version": 2
+        "version": 2,
+        "showAllFilesInBlocks": false
     }
 }

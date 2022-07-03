@@ -4,7 +4,38 @@
             "name": "Movement",
             "baseClass": "",
             "gameObjectType": "Phaser.GameObjects.Sprite",
-            "properties": []
+            "properties": [
+                {
+                    "name": "life",
+                    "label": "Life",
+                    "tooltip": "Life",
+                    "defValue": 140,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "speed",
+                    "label": "Speed",
+                    "tooltip": "Speed",
+                    "defValue": 200,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "invulnerable",
+                    "label": "Invulnerable",
+                    "tooltip": "Invulnerable",
+                    "defValue": false,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "boolean"
+                    }
+                }
+            ]
         },
         {
             "name": "Physics",
@@ -89,6 +120,16 @@
                     "label": "Velocidad",
                     "tooltip": "Velocidad",
                     "defValue": 20,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "damage",
+                    "label": "Daño",
+                    "tooltip": "Daño",
+                    "defValue": 40,
                     "customDefinition": false,
                     "type": {
                         "id": "number"
