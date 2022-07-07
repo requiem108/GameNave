@@ -1,0 +1,63 @@
+{
+    "section1": {
+        "files": [            
+            {
+                "url": "assets/Nave/NaveBlack/nave-black-explotion.json",
+                "type": "animation",
+                "key": "nave-black-explotion"
+            },
+            {
+                "url": "assets/Nave/NaveBlack/nave-normal-black.json",
+                "type": "animation",
+                "key": "nave-normal-black"
+            },
+            {
+                "url": "assets/Nave/NaveBlack/PlayerE0.png",
+                "type": "image",
+                "key": "PlayerE0"
+            },
+            {
+                "url": "assets/Nave/NaveBlack/PlayerE1.png",
+                "type": "image",
+                "key": "PlayerE1"
+            },
+            {
+                "url": "assets/Nave/NaveBlack/PlayerE2.png",
+                "type": "image",
+                "key": "PlayerE2"
+            },
+            {
+                "url": "assets/Nave/NaveBlack/PlayerE3.png",
+                "type": "image",
+                "key": "PlayerE3"
+            },
+            {
+                "url": "assets/Nave/NaveBlack/PlayerL0.png",
+                "type": "image",
+                "key": "PlayerL0"
+            },
+            {
+                "url": "assets/Nave/NaveBlack/PlayerL1.png",
+                "type": "image",
+                "key": "PlayerL1"
+            },
+            {
+                "url": "assets/Nave/NaveBlack/PlayerL2.png",
+                "type": "image",
+                "key": "PlayerL2"
+            },
+            {
+                "url": "assets/Nave/NaveBlack/PlayerN0.png",
+                "type": "image",
+                "key": "PlayerN0"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false
+    }
+}

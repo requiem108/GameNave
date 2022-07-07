@@ -1,0 +1,32 @@
+{
+    "anims": [
+        {
+            "key": "nave-n-blackPlayer",
+            "type": "frame",
+            "frames": [
+                {
+                    "key": "PlayerL0",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "PlayerL1",
+                    "duration": 0,
+                    "keyframe": false
+                },
+                {
+                    "key": "PlayerL2",
+                    "duration": 0,
+                    "keyframe": false
+                }
+            ],
+            "frameRate": 4,
+            "skipMissedFrames": true
+        }
+    ],
+    "globalTimeScale": 1,
+    "meta": {
+        "app": "Phaser Editor 2D v3",
+        "contentType": "Phaser v3 Animations"
+    }
+}

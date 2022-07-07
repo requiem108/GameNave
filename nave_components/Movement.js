@@ -86,7 +86,7 @@ class Movement {
 	}
 
 	DamagePlayer(){
-		
+
 		return (player,damage)=>{			
 
 			if(!this.invulnerable){
@@ -96,26 +96,26 @@ class Movement {
 				this.invulnerable = true;
 
 				if(player.life < 0){
-					player.play('explo_minamina_shot',true)
+					player.play('nave-black-explotionPlayer',true)
 					player.once('animationcomplete',()=>{
 						//GAME OVER
-						player.play('up')
+						//player.play('up')
 						//player.life = 140
 					})
 				}else{				
-					
-					player.play('up',true)
+
+					player.play('nave-n-blackPlayer',true)
 					player.once('animationcomplete',()=>{
 						this.invulnerable=false
 					})
 
 				}
 			}
-			
+
 		}
-		
-		
-		
+
+
+
 	}
 	/* END-USER-CODE */
 }

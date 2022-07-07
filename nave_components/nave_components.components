@@ -134,6 +134,16 @@
                     "type": {
                         "id": "number"
                     }
+                },
+                {
+                    "name": "explotion_mina",
+                    "label": "Explotion",
+                    "tooltip": "Explotion",
+                    "defValue": "Explosión",
+                    "customDefinition": false,
+                    "type": {
+                        "id": "audio-key"
+                    }
                 }
             ]
         }

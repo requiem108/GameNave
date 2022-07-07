@@ -19,6 +19,7 @@ class Preload extends Phaser.Scene {
 		this.load.pack("asset-pack", "assets/asset-pack.json");
 		this.load.pack("asset-nave-pack", "assets/Nave/asset-nave-pack.json");
 		this.load.pack("asset-enemys-pack", "assets/Enemys/asset-pack-enemy.json");
+		this.load.pack("asset-nave-black-pack", "assets/Nave/NaveBlack/asset-pack-nave-black.json");
 	}
 
 	/** @returns {void} */

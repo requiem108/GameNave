@@ -23,7 +23,7 @@ class Level extends Phaser.Scene {
 	editorCreate() {
 
 		// Player
-		const player = this.add.sprite(393, 338, "center");
+		const player = this.add.sprite(393, 338, "PlayerL0");
 		player.scaleX = 0.5;
 		player.scaleY = 0.5;
 
@@ -68,8 +68,9 @@ class Level extends Phaser.Scene {
 	cartucho
 
 	//Sonidos
-	explosion_sound
+	//explosion_sound
 	laser_sound
+	mGun_sound
 
 	create() {	
 
@@ -78,11 +79,12 @@ class Level extends Phaser.Scene {
 		playerGlobal = this.player
 		targetGlobal = this.target
 
-		this.explosion_sound = this.sound.add('z_explotion');
+		//this.explosion_sound = this.sound.add('z_explotion');
 		this.laser_sound = this.sound.add('z_laser')
+		this.mGun_sound = this.sound.add('machin')
 
 
-		this.player.play('up')	
+		this.player.play('nave-n-blackPlayer',true)	
 		this.rotationNave(this.player,this.target)
 		this.shotVulcan = this.add.group({
 			defaultKey:'shotNave',
@@ -121,7 +123,7 @@ class Level extends Phaser.Scene {
 
 		//colisiones disparoEnemigos
 		this.physics.add.collider(this.shotVulcan,this.minaRedGroup,this.minaInpact,null,this);			
-		
+
 		//colisiones con player
 		this.physics.add.collider(this.player,this.minaRedGroup,this.playerInpact_mina,null,this);	
 
@@ -169,7 +171,7 @@ class Level extends Phaser.Scene {
 							conponenteDisparo.movimiento = true;
 							disparo.setActive(true);
 							disparo.setVisible(true);
-							this.laser_sound.play()
+							this.mGun_sound.play()
 						}						
 					},
 					loop: true,
@@ -227,14 +229,14 @@ timerMinas(player,minaRedGroup){
 		if(disparo.active & mina.life > 0){
 			mina.life -= 20
 			if(mina.life <=0){			
-
-				this.explosion_sound.play()
-				mina.play('explo_minamina_shot',true)
+				mina.explotar()
+				//this.explosion_sound.play()
+				/*mina.play('explo_minamina_shot',true)
 				mina.once('animationcomplete',()=>{
 					mina.setVisible(false);
 					mina.setActive(false);
 					mina.play('estado_normal_mina')					
-				})
+				})*/
 
 
 
@@ -248,7 +250,7 @@ timerMinas(player,minaRedGroup){
 
 	playerInpact_mina(player,mina){
 
-		
+
 		player.DamagePlayer(player,mina.damage)
 		mina.play('explo_minamina_shot',true)
 		mina.once('animationcomplete',()=>{				
@@ -256,7 +258,7 @@ timerMinas(player,minaRedGroup){
 			mina.setActive(false);
 			mina.play('estado_normal_mina',true)			
 		})
-		
+
 
 	}
 //INPACT COLISIONES FIN------------------------------

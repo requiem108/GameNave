@@ -21,16 +21,18 @@ class Mina {
 		this.scene.physics.add.existing(this.gameObject)
 
 		this.body = this.gameObject.body
-		this.body.setSize(70, 70)
+		this.body.setSize(70, 70)		
 		this.gameObject.scaleX = 0.7;
 		this.gameObject.scaleY = 0.7;
 		this.gameObject
 		.setActive(true)
 		.setVisible(true)
-		//.setTint(Phaser.Display.Color.RandomRGB().color)
+		
+		//Sounds
+		this.explotion_sound = this.scene.sound.add(this.explotion_mina);
 
 		this.activarMina(0,1,this.gameObject)
-
+		
 		this.scene.events.on(Phaser.Scenes.Events.UPDATE,this.update,this)	
 		/* END-USER-CTR-CODE */
 	}
@@ -48,9 +50,13 @@ class Mina {
 	velocidad = 20;
 	/** @type {number} */
 	damage = 40;
+	/** @type {string} */
+	explotion_mina = "Explosión";
 
 	/* START-USER-CODE */
-	body;	
+	body;
+	explotion_sound;
+	
 
 	update(){	
 
@@ -85,25 +91,16 @@ class Mina {
 	}
 
 	explocion(mina){
-		console.log('EXPLOTAAAAAA')
-		mina.play('explo_minamina_shot')
-		this.scene.tweens.add({
-			targets: mina,			
-			alpha: { from: 1, to: .1 },		
-			ease: 'Linear',       // 'Cubic', 'Elastic', 'Bounce', 'Back'
-			duration: 1000,
-			repeat: 0,            // -1: infinity
-			yoyo: false,
-			onComplete:()=>{
-
-					mina.setVisible(false);
-					mina.setActive(false);
-
-
-			}
-		});
-	} 		
-
+		
+		this.explotion_sound.play()
+		mina.play('explo_minamina_shot',true)
+		mina.once('animationcomplete',()=>{
+			mina.setVisible(false);
+			mina.setActive(false);
+			mina.play('estado_normal_mina')
+		
+		}) 		
+	}
 	/* END-USER-CODE */
 }
 
